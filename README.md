@@ -199,4 +199,4 @@ docker image push pozos-registry:5000/pozos/api.student_list.img:latest
 
 
 # This concludes my Docker mini-project run report.
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![octocat](https://myoctocat.com/assets/images/base-octocat.svg)
