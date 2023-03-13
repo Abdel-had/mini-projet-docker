@@ -136,7 +136,7 @@ docker exec webapp.student_list curl -u toto:python -X GET http://api.student_li
 > ![8-docker exec](https://user-images.githubusercontent.com/101605739/224593842-23c7f3a5-e5bc-4840-a6af-2eda0f622710.png)
 
 
-6b) Using a web browser <IP:80> :
+6b) Using a web browser `IP:80` :
 
 - If you're running the app into a remote server or a virtual machine (e.g provisionned by eazytraining's vagrant file), please find your ip address typing `hostname -I`
 > ![9-hostname -I](https://user-images.githubusercontent.com/101605739/224594393-841a5544-7914-4b4f-91fd-90ce23200156.jpg)
