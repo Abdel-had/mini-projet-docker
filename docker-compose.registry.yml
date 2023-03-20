@@ -2,6 +2,7 @@ version: '3.3'
 services:
   pozos-registry:
     image: registry:2
+    container_name: pozos-registry
     restart: always
     ports: 
         - "5000:5000"
@@ -14,6 +15,7 @@ services:
 
   frontend.reg:
     image: joxit/docker-registry-ui:static
+    container_name: frontend.reg
     depends_on:
       - pozos-registry
     ports: 
