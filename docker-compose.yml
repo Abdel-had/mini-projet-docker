@@ -2,6 +2,7 @@ version: '3.3'
 services:
   webapp.student_list:
     image: php:apache
+    container_name: webapp.student_list
     depends_on:
       - api.student_list
     ports:
@@ -16,6 +17,7 @@ services:
 
   api.student_list:
     image: api.student_list.img
+    container_name: api.student_list
     volumes:
       - './simple_api/:/data/'
     networks:
