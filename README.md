@@ -223,4 +223,7 @@ docker image push pozos-registry:5000/pozos/api.student_list.img:latest
 
 
 # This concludes my Docker mini-project run report.
-![octocat](https://myoctocat.com/assets/images/base-octocat.svg)
+
+Throughout this project, I had the opportunity to create a custom Docker image, configure networks and volumes, and deploy applications using docker-compose. Overall, this project has been a rewarding experience that has allowed me to strengthen my technical skills and gain a better understanding of microservices principles. I am now better equipped to tackle similar projects in the future and contribute to improving containerization and deployment processes within my team and organization.
+
+![octocat](https://myoctocat.com/assets/images/base-octocat.svg) 
