@@ -16,6 +16,7 @@ Period : march-april-may
 
 Sunday the 12th, march 2023
 
+LinkedIn : https://www.linkedin.com/in/abdel-had-hanami/
 
 
 ## Application
