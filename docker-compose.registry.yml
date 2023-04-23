@@ -18,7 +18,7 @@ services:
     command:
       - /bin/sh
       - -c
-      - 'apk add --no-cache apache2-utils && htpasswd -Bbn doukanifr change-me > /auth/htpasswd && registry serve /etc/docker/registry/config.yml'
+      - 'apk add --no-cache apache2-utils && htpasswd -Bbn pozos change-me > /auth/htpasswd && registry serve /etc/docker/registry/config.yml'
     networks:
       - pozos_reg.network
 
