@@ -170,7 +170,7 @@ docker ps
 
 ## Déploiement
 
-Comme les tests ont été réussis, nous pouvons maintenant "composeriser" notre infrastructure en mettant les paramètres `docker run` dans un code `docker-compose.yml`.
+Comme les tests ont réussis, nous pouvons maintenant "composeriser" notre infrastructure en mettant les paramètres `docker run` dans un code `docker-compose.yml`.
 
 1) Exécuter l'application (API + webapp) :
 
