@@ -48,7 +48,7 @@ La troisième et dernière partie concernera le processus de ***déploiement*** 
 
 ### Rôle des fichiers
 
-Dans ma livraison, vous trouverez trois fichiers principaux : un ***Dockerfile***, un ***docker-compose.yml*** et un ***docker-compose.registry.yml***
+Dans mon livrable, vous trouverez trois fichiers principaux : un ***Dockerfile***, un ***docker-compose.yml*** et un ***docker-compose.registry.yml***
 
 - docker-compose.yml : pour lancer l'application (API et application web)
 - docker-compose.registry.yml : pour lancer le registre local et son interface utilisateur
@@ -92,9 +92,7 @@ docker ps
 Comme vous pouvez le voir, le conteneur backend api écoute sur le port 5000.
 Ce port interne peut être atteint par un autre conteneur du même réseau, donc j'ai choisi de ne pas l'exposer.
 
-J'ai aussi dû monter le répertoire local
-
- `./simple_api/` dans le répertoire interne `/data/` du conteneur pour que l'api puisse utiliser la liste `student_age.json`
+J'ai aussi dû monter le répertoire local `./simple_api/` dans le répertoire interne `/data/` du conteneur pour que l'api puisse utiliser la liste `student_age.json`
 
 
 > ![4-./simple_api/:/data/](https://user-images.githubusercontent.com/101605739/224589839-7a5d47e6-fdff-40e4-a803-99ebc9d70b03.png)
@@ -170,7 +168,7 @@ docker ps
 
 ## Déploiement
 
-Comme les tests ont réussis, nous pouvons maintenant "composeriser" notre infrastructure en mettant les paramètres `docker run` dans un code `docker-compose.yml`.
+Comme les tests ont réussis, nous pouvons maintenant "composeriser" notre infrastructure en mettant les paramètres `docker run` au format ***infrastructure as code*** dans un fichier `docker-compose.yml`.
 
 1) Exécuter l'application (API + webapp) :
 
@@ -180,8 +178,8 @@ Comme nous avons déjà créé l'image de l'application, il vous suffit maintena
 docker-compose up -d
 ```
 
-Docker-compose permet de choisir quel conteneur doit démarrer en premier.
-Le conteneur de l'API sera le premier car j'ai spécifié que le webapp `dépend_de:` lui.
+Docker-compose permet de choisir quel conteneur doit démarrer en premier grâce au paramètre `depends_on:`.
+Ici, le conteneur de l'API démarrera en premier.
 > ![12-dépend de](https://user-images.githubusercontent.com/101605739/224595564-e010cc3f-700b-4b3e-9251-904dafbe4067.png)
 
 Et l'application fonctionne :
@@ -202,14 +200,17 @@ docker-compose -f docker-compose.registry.yml up -d
 > ![15-vérifier gui reg](https://user-images.githubusercontent.com/101605739/224596652-70c2f273-5ec9-406f-b8b5-ea1398b88998.jpg)
 
 
-3) Pousser une image sur le registre et tester l'interface utilisateur
+3) Se connecter et pousser une image sur le registre et tester l'interface utilisateur
 
 Vous devez la renommer avant (`:latest` est facultatif) :
 
+> NB : pour cet exercice j'ai laissé les identifiants dans le fichier **.yml**
+
 ```bash
-docker image tag api.student_list.img:latest pozos-registry:5000/pozos/api.student_list.img:latest
+docker login
+docker image tag api.student_list.img:latest localhost:5000/pozos/api.student_list.img:latest
 docker images
-docker image push pozos-registry:5000/pozos/api.student_list.img:latest
+docker image push localhost:5000/pozos/api.student_list.img:latest
 ```
 
 > ![16-pousser image au registre](https://user-images.githubusercontent.com/101605739/224596478-a544269c-5cee-4e90-ace0-fa31a005a429.jpg)
