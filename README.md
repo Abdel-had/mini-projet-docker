@@ -170,7 +170,7 @@ docker ps
 
 ## Deployment
 
-As the tests passed we can now 'composerize' our infrastructure by putting the `docker run` parameters into a `docker-compose.yml` code.
+As the tests passed we can now 'composerize' our infrastructure by putting the `docker run` parameters in ***infrastructure as code*** format into a `docker-compose.yml` file.
 
 1) Run the application (api + webapp) :
 
@@ -207,10 +207,13 @@ docker-compose -f docker-compose.registry.yml up -d
 
 You have to rename it before (`:latest` is optional) :
 
+> NB: for this exercise, I have left the credentials in the **.yml** file.
+
 ```bash
-docker image tag api.student_list.img:latest pozos-registry:5000/pozos/api.student_list.img:latest
+docker login
+docker image tag api.student_list.img:latest localhost:5000/pozos/api.student_list.img:latest
 docker images
-docker image push pozos-registry:5000/pozos/api.student_list.img:latest
+docker image push localhost:5000/pozos/api.student_list.img:latest
 ```
 
 > ![16-push image to registry](https://user-images.githubusercontent.com/101605739/224596478-a544269c-5cee-4e90-ace0-fa31a005a429.jpg)
