@@ -183,7 +183,7 @@ Ici, le conteneur de l'API démarrera en premier.
 > ![12-dépend de](https://user-images.githubusercontent.com/101605739/224595564-e010cc3f-700b-4b3e-9251-904dafbe4067.png)
 
 Et l'application fonctionne :
-> ![13-vérifier app](https://user-images.githubusercontent.com/101605739/224596825-61b2e2af-ebea-42c0-be8b-20b4743f1ece.jpg)
+> ![13-vérifier app](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/2002c41f-6590-4491-b571-65de7ba1457e)
 
 
 2) Créer un registre et son frontend
@@ -197,8 +197,7 @@ Par exemple, nous pourrons supprimer des images du registre via l'interface util
 ```bash
 docker-compose -f docker-compose.registry.yml up -d
 ```
-> ![15-vérifier gui reg](https://user-images.githubusercontent.com/101605739/224596652-70c2f273-5ec9-406f-b8b5-ea1398b88998.jpg)
-
+> ![15-vérifier gui reg](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/99f182f1-bc73-458c-8b29-207a681a31fd)
 
 3) Se connecter et pousser une image sur le registre et tester l'interface utilisateur
 
@@ -213,11 +212,11 @@ docker images
 docker image push localhost:5000/pozos/api.student_list.img:latest
 ```
 
-> ![16-pousser image au registre](https://user-images.githubusercontent.com/101605739/224596478-a544269c-5cee-4e90-ace0-fa31a005a429.jpg)
+> ![16-pousser image au registre](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/4dbff256-72ae-4c6e-b076-65e705828f28)
 
-> ![17-registre complet](https://user-images.githubusercontent.com/101605739/224597957-e4da3cb4-9c95-4f16-96c7-ffceed3fb558.jpg)
+> ![17-registre complet](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/fbc9cd2b-ec4b-4211-ba26-1a454936b204)
 
-> ![18-détails registre complet](https://user-images.githubusercontent.com/101605739/224598011-4b2efc75-dfb6-407e-b6cb-0d03a35c09ed.jpg)
+> ![18-détails registre complet](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/3c89e9cc-f1f4-42f8-bea4-4e3ec1672cbe)
 
 
 ------------
