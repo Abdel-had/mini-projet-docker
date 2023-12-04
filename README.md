@@ -185,7 +185,7 @@ The api container will be first as I specified that the webapp `depends_on:` it.
 > ![12-depends on](https://user-images.githubusercontent.com/101605739/224595564-e010cc3f-700b-4b3e-9251-904dafbe4067.png)
 
 And the application works :
-> ![13-check app](https://user-images.githubusercontent.com/101605739/224596825-61b2e2af-ebea-42c0-be8b-20b4743f1ece.jpg)
+> ![13-check app](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/2002c41f-6590-4491-b571-65de7ba1457e)
 
 
 2) Create a registry and its frontend
@@ -200,7 +200,7 @@ E.g we'll be able to delete images from the registry via the gui.
 ```bash
 docker-compose -f docker-compose.registry.yml up -d
 ```
-> ![15-check gui reg](https://user-images.githubusercontent.com/101605739/224596652-70c2f273-5ec9-406f-b8b5-ea1398b88998.jpg)
+> ![15-check gui reg](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/99f182f1-bc73-458c-8b29-207a681a31fd)
 
 
 3) Push an image on the registry and test the gui
@@ -216,11 +216,11 @@ docker images
 docker image push localhost:5000/pozos/api.student_list.img:latest
 ```
 
-> ![16-push image to registry](https://user-images.githubusercontent.com/101605739/224596478-a544269c-5cee-4e90-ace0-fa31a005a429.jpg)
+> ![16-push image to registry](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/4dbff256-72ae-4c6e-b076-65e705828f28)
 
-> ![17-full reg](https://user-images.githubusercontent.com/101605739/224597957-e4da3cb4-9c95-4f16-96c7-ffceed3fb558.jpg)
+> ![17-full reg](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/fbc9cd2b-ec4b-4211-ba26-1a454936b204)
 
-> ![18-full reg details](https://user-images.githubusercontent.com/101605739/224598011-4b2efc75-dfb6-407e-b6cb-0d03a35c09ed.jpg)
+> ![18-full reg details](https://github.com/Abdel-had/mini-projet-docker/assets/101605739/3c89e9cc-f1f4-42f8-bea4-4e3ec1672cbe)
 
 
 ------------
